@@ -145,17 +145,23 @@ main.terminal {
     }
 
     ul {
+        height: 400px;
         transform: rotate(180deg);
-        margin: 0px 4px;
+        direction:rtl;
+        margin: 0px 8px;
+        overflow-y: scroll;
+
 
         li {
             border: none;
     
             display: flex;
-            align-items: center;
 
             transform: rotate(-180deg);
+            direction:ltr;
+            text-align: left;
             font-family: "Fira Code", ui-monospace, monospace, $font-stack;
+            white-space: pre-wrap;
 
             // &:not(.cursor, .runtime) {
             //     padding-left: 4px;
