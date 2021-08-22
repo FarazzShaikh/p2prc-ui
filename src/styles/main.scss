@@ -26,54 +26,54 @@ sans-serif,
 'Segoe UI Symbol';
 
 
-h1,
-h2,
-h3,
-#unicorn-btn {
-    font-family:
-        'Cinzel',
-        serif,
-        $font-stack;
-}
+// h1,
+// h2,
+// h3,
+// #unicorn-btn {
+//     font-family:
+//         'Cinzel',
+//         serif,
+//         $font-stack;
+// }
 
-#unicorn-btn {
-    color: black;
-    font-size: large;
-    font-style: italic;
-}
+// #unicorn-btn {
+//     color: black;
+//     font-size: large;
+//     font-style: italic;
+// }
 
-.title,
-span,
-p,
-li{
-    color: black;
+// .title,
+// span,
+// p,
+// li{
+//     color: black;
 
-}
+// }
 
 
-h4,
-h5,
-h6,
-p,
-div,
-span:not(code span) {
-    font-family:
-        "Roboto",
-        serif,
-        $font-stack;
-}
+// h4,
+// h5,
+// h6,
+// p,
+// div,
+// span:not(code span) {
+//     font-family:
+//         "Roboto",
+//         serif,
+//         $font-stack;
+// }
 
-h1 {
-    font-weight: bold;
-    margin: 0 !important;
-}
+// h1 {
+//     font-weight: bold;
+//     margin: 0 !important;
+// }
 
-h2 {
-    margin-top: 0 !important;
-    font-style: italic;
-    font-weight: 400 !important;
-    color: #4a4a4a !important;
-}
+// h2 {
+//     margin-top: 0 !important;
+//     font-style: italic;
+//     font-weight: 400 !important;
+//     color: #4a4a4a !important;
+// }
 
 
 body {
@@ -82,6 +82,7 @@ body {
     // overflow: hidden;
     background-color: $bg-light !important;
     transition: 200ms background-color ease-in-out;
+    overflow: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -92,7 +93,9 @@ body {
     }
 
     .emoji,
-    .shadow {
+    .shadow,
+    img,
+    video {
         filter: invert(100%) hue-rotate(-180deg) brightness(105%) contrast(95%) !important;
         -webkit-filter: invert(100%) hue-rotate(-180deg) brightness(105%) contrast(95%) !important;
     }
@@ -123,6 +126,7 @@ body {
 main.terminal {
     width: 70%;
     aspect-ratio: 4 / 3;
+    max-height: 400px;
     background-color: $term-light;
     border-radius: 10px;
     font-size: 13.33px;
@@ -145,7 +149,7 @@ main.terminal {
     }
 
     ul {
-        height: 400px;
+        height: 100%;
         transform: rotate(180deg);
         direction:rtl;
         margin: 0px 8px;

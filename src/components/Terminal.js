@@ -59,6 +59,8 @@ export function Terminal() {
           const _log = [{ output: Stdout || Stderr, input }, ...log];
           setLog(_log);
         } catch (error) {
+          const _log = [{ output: "Error: Could not reach server.", input }, ...log];
+          setLog(_log);
           console.error(error);
         }
       }
@@ -71,7 +73,7 @@ export function Terminal() {
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
-      //   inputRef.current.scrollIntoView({ behavior: "smooth" });
+
       var page = document.querySelector("body");
       var scrollable = document.querySelector("main.terminal ul");
       var scrolled = document.querySelector(".cursor input");
@@ -81,7 +83,12 @@ export function Terminal() {
   }, [inputRef, log]);
 
   return (
-    <div className="terminal-container">
+    <div
+      className="terminal-container"
+      onClick={() => {
+        inputRef.current?.focus();
+      }}
+    >
       <main className="terminal">
         <div className="shadow" />
 
