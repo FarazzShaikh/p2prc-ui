@@ -19,7 +19,7 @@ jobs:
           echo "::set-env name=FOO::$FOO"
 
       - name: Save Version
-      - uses: sergeysova/jq-action@v2
+        uses: sergeysova/jq-action@v2
         with:
           cmd: jq --arg v "$FOO"'.version = "$v"' package.json > tmp && mv tmp package.json
 
