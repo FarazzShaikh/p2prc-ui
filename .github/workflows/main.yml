@@ -24,7 +24,7 @@ jobs:
       - name: Save Version
         uses: sergeysova/jq-action@v2
         with:
-          cmd: jq --arg v "$FOO" '.version = "$v"' package.json > tmp && mv tmp package.json
+          cmd: jq ".version = \"$FOO\"" package.json > tmp && mv tmp package.json
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
