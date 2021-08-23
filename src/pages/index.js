@@ -12,7 +12,7 @@ export default function Index({ data }) {
 
   return (
     <Default>
-      <div className="container ml-6 mr-6">
+      <div className="container ml-6 mr-6 ">
         <h1 align="center" className="title is-2">
           <br />
           <a href="">
@@ -23,8 +23,10 @@ export default function Index({ data }) {
         </h1>
 
         <Terminal />
+        <br />
 
         <div className="content">
+          <h1>README.md</h1>
           <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </div>

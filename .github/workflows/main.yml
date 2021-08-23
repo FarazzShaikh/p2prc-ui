@@ -1,0 +1,35 @@
+name: Build and Deploy
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get README
+        run: |
+          curl -o src/markdown/README.md https://raw.githubusercontent.com/Akilan1999/p2p-rendering-computation/master/README.md
+          awk '/<!-- seperator -->/{p=1}p' src/markdown/README.md > tmp && mv tmp src/markdown/README.md
+
+      - name: Get Version
+        run: |
+          export FOO=$(curl https://api.github.com/repos/Akilan1999/p2p-rendering-computation/tags/ )
+          echo "::set-env name=FOO::$FOO"
+
+      - name: Save Version
+      - uses: sergeysova/jq-action@v2
+        with:
+          cmd: jq --arg v "$FOO"'.version = "$v"' package.json > tmp && mv tmp package.json
+
+      - name: Build
+        run: |
+          yarn install
+          yarn build
+
+      - name: Publish
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: public

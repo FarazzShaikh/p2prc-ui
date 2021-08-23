@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { version } from "../../package.json";
 
 function Runtime() {
   return (
@@ -6,7 +7,7 @@ function Runtime() {
       <span className="name">p2prc</span>
       <span>&ensp;is&ensp;</span>
       <span className="emoji">📦&ensp;</span>
-      <span className="version">v1.0.0</span>
+      <span className="version">{version}</span>
     </li>
   );
 }

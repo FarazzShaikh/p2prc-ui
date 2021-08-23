@@ -81,24 +81,23 @@ body {
     min-height: 100vh;
     // overflow: hidden;
     background-color: $bg-light !important;
+
     transition: 200ms background-color ease-in-out;
     overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        // background-color: $bg-dark !important;
-        filter: invert(100%) hue-rotate(-180deg) brightness(105%) contrast(95%) !important;
-        -webkit-filter: invert(100%) hue-rotate(-180deg) brightness(105%) contrast(95%) !important;
-    }
+body {
+    // background-color: $bg-dark !important;
+    filter: invert(100%) hue-rotate(-180deg) brightness(105%) contrast(95%) !important;
+    -webkit-filter: invert(100%) hue-rotate(-180deg) brightness(105%) contrast(95%) !important;
+}
 
-    .emoji,
-    .shadow,
-    img,
-    video {
-        filter: invert(100%) hue-rotate(-180deg) brightness(105%) contrast(95%) !important;
-        -webkit-filter: invert(100%) hue-rotate(-180deg) brightness(105%) contrast(95%) !important;
-    }
+.emoji,
+.shadow,
+img,
+video {
+    filter: invert(100%) hue-rotate(-180deg) brightness(105%) contrast(95%) !important;
+    -webkit-filter: invert(100%) hue-rotate(-180deg) brightness(105%) contrast(95%) !important;
 }
 
 .shadow {

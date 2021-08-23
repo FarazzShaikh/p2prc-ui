@@ -1,13 +1,9 @@
-
 <!-- seperator -->
-
-
 
 [![GPLv2 license](https://img.shields.io/badge/License-GPLv2-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Akilan1999/p2p-rendering-computation/graphs/commit-activity)
 [![made-with-Go](https://img.shields.io/badge/Made%20with-Go-1f425f.svg)](http://golang.org)
 [![GoDoc reference example](https://img.shields.io/badge/godoc-reference-blue.svg)](https://pkg.go.dev/git.sr.ht/~akilan1999/p2p-rendering-computation)
-
 
 The main aim of this project was to create a custom peer to peer network. The user acting as the
 client has total flexibility on how to batch the tasks and the user acting as the server has complete
@@ -102,4 +98,5 @@ As we are working on the open source project p2prc (i.e  p2p network designed fo
 or just providing feedback on new features to build  or even just curious about new features added to the project. We have decided to create a discord group.                 
 Group:
 https://discord.gg/b4nRGTjYqy
+
 
