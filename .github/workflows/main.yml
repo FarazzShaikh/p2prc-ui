@@ -17,11 +17,15 @@ jobs:
         run: |
           export FOO=$(curl https://api.github.com/repos/Akilan1999/p2p-rendering-computation/tags/ )
           echo "::set-env name=FOO::$FOO"
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
       - name: Save Version
         uses: sergeysova/jq-action@v2
         with:
           cmd: jq --arg v "$FOO"'.version = "$v"' package.json > tmp && mv tmp package.json
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
       - name: Build
         run: |
