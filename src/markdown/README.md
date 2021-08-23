@@ -19,15 +19,6 @@ flexibility on tracking the container's usages and killing the containers at any
 <br>
 
 ## Table of contents
-- [Gophers talk](#gophers-talk)
-- [Table of contents](#table-of-contents)
-- [Introduction](#introduction)
-  - [Objectives](#objectives)
-- [Installation from source](#installation-from-source)
-- [Design Architecture](#design-architecture)
-- [Implementation](#implementation)
-- [Find out more](#find-out-more)
-
 <br>
 
 ## Introduction
@@ -39,7 +30,7 @@ This project aims to create a peer to peer (p2p) network, where a user can use t
 - Server to create a containerised environment
 - The client node to run tasks on Server containerised node
 
-[Read more on the introduction](Docs/Introduction.md)
+[Read more on the introduction](https://github.com/Akilan1999/p2p-rendering-computation/tree/master/Docs/Introduction.md)
 
 <br>
 
@@ -79,21 +70,21 @@ This project aims to create a peer to peer (p2p) network, where a user can use t
    ```
    ./p2prc -h 
    ```
-[Read more on the installation and usage](Docs/Installation.md)
+[Read more on the installation and usage](https://github.com/Akilan1999/p2p-rendering-computation/tree/master/Docs/Installation.md)
 
 <br>
 
 ## Design Architecture 
 The design architecture was inspired and based on the linux kernel design. The project is segmented into various modules. Each module is responsible for certain tasks in the project. The modules are highly dependent on each other hence the entire codebase can be considered as a huge monolithic chuck which acts as its own library
 
-[Read more on the Design Architecture](Docs/DesignArchtectureIntro.md)
+[Read more on the Design Architecture](https://github.com/Akilan1999/p2p-rendering-computation/tree/master/Docs/DesignArchtectureIntro.md)
 
 <br>
 
 ## Implementation
 The programming language used for this project was Golang. The reason Go lang was chosen was because it is a compiled language. The entire codebase is just a single binary file. When distributing to other linux distributing the only requirement would be the binary file to run the code. It is easy to write independant modules and be monolithic at the sametime using Go. Using Go.mod makes it very easy to handle external libraries and modularise code. The go.mod name for the project is git.sr.ht/~akilan1999/p2p-rendering-computation.
 
-[Read more on the Implementation](Docs/Implementation.md)
+[Read more on the Implementation](https://github.com/Akilan1999/p2p-rendering-computation/tree/master/Docs/Implementation.md)
 
 <br>
 
