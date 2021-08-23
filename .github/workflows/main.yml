@@ -17,6 +17,7 @@ jobs:
         run: |
           export FOO=$(curl https://api.github.com/repos/Akilan1999/p2p-rendering-computation/tags/ )
           echo "::set-env name=FOO::$FOO"
+          echo "$FOO"
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
@@ -29,6 +30,7 @@ jobs:
 
       - name: Build
         run: |
+          cat package.json
           yarn install
           yarn build
 
