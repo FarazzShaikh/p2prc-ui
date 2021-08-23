@@ -15,7 +15,7 @@ jobs:
 
       - name: Get Version
         run: |
-          export FOO=$(curl https://api.github.com/repos/Akilan1999/p2p-rendering-computation/tags/ )
+          export FOO=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/Akilan1999/p2p-rendering-computation/tags)
           echo "::set-env name=FOO::$FOO"
           echo "$FOO"
         env:
