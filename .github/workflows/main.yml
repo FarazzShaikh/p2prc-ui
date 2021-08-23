@@ -15,18 +15,12 @@ jobs:
 
       - name: Get Tags
         run: |
-          export JSON=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/Akilan1999/p2p-rendering-computation/tags)
-          echo "::set-env name=JSON::$JSON"
-          echo "$JSON"
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+          curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/Akilan1999/p2p-rendering-computation/tags > tmp.json
 
       - name: Get Version
         uses: sergeysova/jq-action@v2
         with:
-          cmd: echo $JSON | jq ".[0].name"
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+          cmd: jq ".[0].name" tmp.json
 
       - name: Save Version
         uses: sergeysova/jq-action@v2
